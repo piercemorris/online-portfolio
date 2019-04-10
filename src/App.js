@@ -32,9 +32,9 @@ class App extends Component {
               <li>contact</li>
             </ul>
           </nav>
-          <Particles className="particles" params={params}/>
+          <Particles className="particles" params={params} />
           <div className="box">
-            <h1 className="heading-primary">              
+            <h1 className="heading-primary">
               <span className="heading-primary--main">Pierce James Morris</span>
               <span className="heading-primary--sub one">Computer Scientist</span>
               <span className="heading-primary--sub two">Avid Japanese learner</span>
@@ -48,7 +48,12 @@ class App extends Component {
               About me
             </div>
             <div className="text">
-              text here
+              I first started my programming venture in 2015 when I first got introduced to the Python programming language, for my A-level computer science course.
+              Initially I was interested in game development where I first developed a 'brick breaker' style game using Pygame.
+              <br /><br />
+              Upon honing my development techniques, I quickly got into web developement. I liked the instant gratification of hosting a website so quickly
+              and it being used almost instantly. Since then I moved onto full-stack javascript development whilst studying a Computer Science degree at the
+              University of Nottingham.
             </div>
             <img className="me" src={require('./images/me.jpg')} alt="me" />
           </div>
