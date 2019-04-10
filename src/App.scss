@@ -1,0 +1,135 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+@import url('https://fonts.googleapis.com/css?family=Roboto+Mono:400,700');
+
+$color-pink: rgb(167, 0, 218);
+$color-cyan: rgb(0, 217, 255);
+$color-cyan-dark: rgb(255, 255, 255);
+$color-white: #FFF;
+
+body {
+  font-family: 'Roboto', sans-serif;
+}
+
+.navigation {
+  ul {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 100%;
+
+    li {
+      font-size: 3rem;
+      background: linear-gradient(to bottom, $color-cyan-dark 0%, $color-cyan-dark 100%); 
+      background-position: 0 100%;
+      background-repeat: repeat-x;
+      background-size: 0.5rem 0.5rem;
+      transition: background-size .2s;
+      margin: 2rem 0;
+      padding: 1rem;
+      z-index: 5;
+      text-transform: uppercase;
+      display: inline-block;
+      flex: 0 1 auto;
+      list-style-type: none;
+
+      &:hover {
+        background-size: 0.5rem 100%;
+        cursor: pointer;
+      }
+    }
+  }
+}
+
+.header {
+  height: 110vh;
+  background-image: linear-gradient(to bottom right, $color-cyan, $color-pink);
+  background-size: cover;
+  background-position: top;
+  clip-path: polygon(0 0, 100% 0, 100% 100vh, 0 100%);
+  position: relative;
+
+  .particles {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 0;
+  }
+
+  .heading-primary {
+    position: absolute;
+    top: 40%;
+    left: 15%;
+    transform: translateY(-50%);
+
+    &--main {
+      display: block;
+      text-transform: uppercase;
+      font-size: 6rem;
+      font-weight: 300;
+    }
+
+    &--sub {
+      display: block;
+      font-size: 4rem;
+      font-weight: 400;
+      text-transform: uppercase;
+      text-align: justify;
+    }
+
+    .one {
+      letter-spacing: 1.33rem;
+    }
+
+    .two {
+      letter-spacing: 0.83rem;
+    }
+
+    .three {
+      letter-spacing: 0.67rem;
+    }
+  }
+}
+
+.about {
+  height: 95vh;
+  margin-top: -15rem;
+  padding: 20rem 5rem 5rem 5rem;
+  background-color: $color-white;
+  background-size: cover;
+  background-position: top;
+
+  .about-info {
+    position: relative;
+    width: 100%;
+    height: 100%;
+
+    .title {
+      position: absolute;
+      text-transform: uppercase;
+      font-size: 5rem;
+      font-weight: 200;
+      top: 0%;
+      left: 20%;
+    }
+
+    .text {
+      position: absolute;
+      text-align: justify;
+      font-size: 2rem;
+      top: 15%;
+      left: 10%;
+      right: 40%;
+    }
+
+    .me {
+      position: relative;
+      top: 15%;
+      left: 65%;
+      width: 30rem;
+      height: 30rem;
+      border-radius: 50%;
+    }
+  }
+}
