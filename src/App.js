@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import Particles from 'react-particles-js';
+import ScrollableAnchor from 'react-scrollable-anchor'
+import { goToAnchor } from 'react-scrollable-anchor'
 import './App.scss';
 
 const params = {
@@ -20,15 +22,19 @@ const params = {
 }
 
 class App extends Component {
+
+  goToSection = (section) => {
+    goToAnchor(section);
+  }
+
   render() {
     return (
       <div className="App">
         <header className="header" id="home-section">
           <nav className="navigation">
             <ul>
-              <li>home</li>
-              <li>about</li>
-              <li>portfolio</li>
+              <li onClick={() => this.goToSection('about-section')}>about</li>
+              <li onClick={() => this.goToSection('projects-section')}>portfolio</li>
               <li>contact</li>
             </ul>
           </nav>
@@ -42,7 +48,8 @@ class App extends Component {
             </h1>
           </div>
         </header>
-        <section className="about" id="about-section">
+        <ScrollableAnchor id="about-section">
+        <section className="about">
           <div className="about-info">
             <div className="title">
               About me
@@ -57,6 +64,45 @@ class App extends Component {
             </div>
             <img className="me" src={require('./images/me.jpg')} alt="me" />
           </div>
+        </section>
+        </ScrollableAnchor>
+        <section>
+          <ScrollableAnchor id="projects-section">
+          <div className="projects">
+            <div className="title">
+              Projects
+            </div>
+            <div className="container">
+              <div className="project">
+                project 1
+              </div>
+              <div className="project">
+                project 2
+              </div>
+              <div className="project">
+                project 3
+              </div>
+              <div className="project">
+                project 3
+              </div>
+              <div className="project">
+                project 3
+              </div>
+              <div className="project">
+                project 3
+              </div>
+              <div className="project">
+                project 3
+              </div>
+              <div className="project">
+                project 3
+              </div>
+              <div className="project">
+                project 3
+              </div>
+            </div>
+          </div>
+          </ScrollableAnchor>
         </section>
       </div>
     );
