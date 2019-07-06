@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import Particles from 'react-particles-js';
 import ScrollableAnchor from 'react-scrollable-anchor'
 import { goToAnchor } from 'react-scrollable-anchor'
+import Project from './Project';
 import './App.scss';
 
 const params = {
@@ -33,8 +34,8 @@ class App extends Component {
         <header className="header" id="home-section">
           <nav className="navigation">
             <ul>
-              <li onClick={() => this.goToSection('about-section')}>about</li>
-              <li onClick={() => this.goToSection('projects-section')}>portfolio</li>
+              <li onClick={() => this.goToSection('about')}>about</li>
+              <li onClick={() => this.goToSection('projects')}>projects</li>
               <li>contact</li>
             </ul>
           </nav>
@@ -48,7 +49,7 @@ class App extends Component {
             </h1>
           </div>
         </header>
-        <ScrollableAnchor id="about-section">
+        <ScrollableAnchor id="about">
         <section className="about">
           <div className="about-info">
             <div className="title">
@@ -67,39 +68,35 @@ class App extends Component {
         </section>
         </ScrollableAnchor>
         <section>
-          <ScrollableAnchor id="projects-section">
+          <ScrollableAnchor id="projects">
           <div className="projects">
             <div className="title">
               Projects
             </div>
             <div className="container">
-              <div className="project">
-                project 1
-              </div>
-              <div className="project">
-                project 2
-              </div>
-              <div className="project">
-                project 3
-              </div>
-              <div className="project">
-                project 3
-              </div>
-              <div className="project">
-                project 3
-              </div>
-              <div className="project">
-                project 3
-              </div>
-              <div className="project">
-                project 3
-              </div>
-              <div className="project">
-                project 3
-              </div>
-              <div className="project">
-                project 3
-              </div>
+              <Project 
+                name="Office Jukebox" 
+                desc="Made as part of a 2nd year group project which allows multiple
+                      users to add songs to a shared queue, with a built in priority
+                      system and integrated with Alexa."
+                tech="Node.js, React.js, MongoDB, Spotify, Alexa"
+                link="https://github.com/perjermer/BJSSOfficeJukebox"
+              />
+              <Project 
+                name="Robofriends" 
+                desc="A simple robot search app that uses Redux. Built to get comfortable 
+                      with Progressive Web Apps specifications and to learn React with 
+                      Redux."
+                tech="React.js, Redux, API"
+                link="https://perjermer.github.io/robofriends/"
+              />
+              <Project 
+                name="Dissertation" 
+                desc="A mobile app that allows sharing and authoring personalised city 
+                      tours."
+                tech="Node.js, PostgreSQL, React Native, Redux"
+                link=""
+              />
             </div>
           </div>
           </ScrollableAnchor>
